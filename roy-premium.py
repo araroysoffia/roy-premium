@@ -549,7 +549,7 @@ def generate(text):
 					results.append("sayang")
 					results.append("bismillah")
 					results.append("anjing")
-					results.append("123456")
+					results.append("kontol")
 	return results
 
 ### USER AGENT ###
