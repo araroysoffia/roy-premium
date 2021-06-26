@@ -36,10 +36,11 @@ def banner():
     print(""" ╦═╗╔═╗╦ ╦   ╔═╗╦═╗╔═╗╔╦╗╦╦ ╦╔╦╗\n ╠╦╝║ ║╚╦╝───╠═╝╠╦╝║╣ ║║║║║ ║║║║\n ╩╚═╚═╝ ╩    ╩  ╩╚═╚═╝╩ ╩╩╚═╝╩ ╩""")
 
 host="https://mbasic.facebook.com"
+ua = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
 ips=None
 try:
 	b=requests.get("http://ip-api.com/json/").json()["query"]
-	ips=requests.get("http://ip-api.com/json/"+b,headers={"Referer":"http://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"}).json()["country"].lower()
+	ips=requests.get("http://ip-api.com/json/"+b,headers={"Referer":"http://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":ua}).json()["country"].lower()
 except:
 	ips=None
 
@@ -555,7 +556,7 @@ def generate(text):
 ### USER AGENT ###
 
 def defaultua():
-    ua = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"
+    ua = user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
     try:
         ugent = open('ugent.txt','w')
         ugent.write(ua)
