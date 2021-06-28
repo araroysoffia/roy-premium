@@ -551,6 +551,10 @@ def generate(text):
 					results.append("bismillah")
 					results.append("anjing")
 					results.append("kontol")
+					results.append("rahasia")
+					results.append("indonesia")
+					results.append("jakarta")
+					results.append("bandung")
 	return results
 
 ### USER AGENT ###
