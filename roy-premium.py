@@ -544,16 +544,10 @@ def generate(text):
 			else:
 				results.append(i+"123")
 				results.append(i+"12345")
-				results.append(i)
+				results.append("sayang")
 				if "indonesia" in ips:
-					results.append("sayang")
 					results.append("bismillah")
-					results.append("anjing")
-					results.append("kontol")
-					results.append("rahasia")
 					results.append("indonesia")
-					results.append("jakarta")
-					results.append("bandung")
 	return results
 
 ### USER AGENT ###
