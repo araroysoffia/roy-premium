@@ -7,7 +7,6 @@ Token FB
 1) nama
 2) nama123
 3) nama12345
-4) sayang
 ````
 # Perintah
 ````php
@@ -19,7 +18,7 @@ $ pip install requests
 $ pip install mechanize
 $ pip install futures
 $ rm -rf roy-premium
-$ git clone https://github.com/royofficial/roy-premium
+$ git clone https://github.com/royarasoffia/roy-premium
 $ cd roy-premium
 $ git pull
 $ python roy-premium.py
