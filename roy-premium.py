@@ -39,7 +39,7 @@ host="https://mbasic.facebook.com"
 ips=None
 try:
 	b=requests.get("http://ip-api.com/json/").json()["query"]
-	ips=requests.get("http://ip-api.com/json/"+b,headers={"Referer":"http://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":"Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A805N) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36"}).json()["country"].lower()
+	ips=requests.get("http://ip-api.com/json/"+b,headers={"Referer":"http://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":"Mozilla/5.0 (Linux; Android 9; SM-A805F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36"}).json()["country"].lower()
 except:
 	ips=None
 
@@ -89,7 +89,7 @@ def basecookie():
 def hdcok():
 	global host
 	hosts=host
-	r={"origin": hosts, "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A805N) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36", "Host": "".join(bs4.re.findall("://(.*?)$",hosts)), "referer": hosts+"/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"}
+	r={"origin": hosts, "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-A805F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36", "Host": "".join(bs4.re.findall("://(.*?)$",hosts)), "referer": hosts+"/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"}
 	return r
 
 def gets_cookies(cookies):
@@ -158,7 +158,7 @@ def gen():
         cookie = input(k+"\n["+p+"•"+k+"]"+p+" Cookies : ")
         try:
                 data = requests.get("https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_", headers = {
-                "user-agent"                : "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A805N) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36", # Jangan Di Ganti Ea Anjink.
+                "user-agent"                : "Mozilla/5.0 (Linux; Android 9; SM-A805F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36", # Jangan Di Ganti Ea Anjink.
                 "referer"                   : "https://m.facebook.com/",
                 "host"                      : "m.facebook.com",
                 "origin"                    : "https://m.facebook.com",
@@ -551,7 +551,7 @@ def generate(text):
 ### USER AGENT ###
 
 def defaultua():
-    ua = "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A805N) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/75.0.3770.143 Mobile Safari/537.36"
+    ua = "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     try:
         ugent = open('ugent.txt','w')
         ugent.write(ua)
